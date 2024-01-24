@@ -11,7 +11,6 @@ FROM base as test
 CMD ["./mvnw", "test"]
 
 FROM base as development
-EXPOSE 8080
 CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql", "-Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000'"]
 
 FROM base as build
