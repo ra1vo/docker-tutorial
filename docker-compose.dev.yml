@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   petclinic:
+    platform: linux/arm64
     build:
       context: .
       target: development
