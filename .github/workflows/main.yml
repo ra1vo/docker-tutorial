@@ -36,4 +36,4 @@ jobs:
           push: true
           target: production
           tags: ${{ secrets.DOCKER_USERNAME }}/spring-app:latest
-          platform: linux/arm64/v8
+          platforms: linux/arm64/v8
