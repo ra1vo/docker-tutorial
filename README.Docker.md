@@ -19,3 +19,26 @@ docs for more detail on building and pushing.
 Notes.
 
 Docker compose is building and running image
+
+-start server
+-run docker run -p 8080:8080 flappygameslv/spring-app
+
+-create new build and push to docker hub
+
+>docker build --tag flappygameslv/spring-app .
+> 
+>docker push flappygameslv/spring-app:tagname
+> 
+> `docker pull flappygameslv/spring-app  (in server)`
+> 
+> `docker stop springboot-server`
+> 
+> 
+> 
+` docker run --rm  \
+--name springboot-server \
+--network mysqlnet \
+-e MYSQL_URL=jdbc:mysql://mysqlserver/petclinic \
+-e SPRING_PROFILES_ACTIVE=mysql \
+-p 8080:8080 flappygameslv/spring-app`
+
